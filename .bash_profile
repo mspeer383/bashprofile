@@ -12,6 +12,7 @@
 #  7.   System Operations & Information
 #  8.   Web Development
 #  9.   Reminders & Notes
+#  100. SDK MAN MUST BE LAST
 #
 #  ---------------------------------------------------------------------------
 
@@ -295,3 +296,15 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 #   e.g.: hdiutil create -size 10m 10MB.dmg
 #   the above create files that are almost all zeros - if random bytes are desired
 #   then use: ~/Dev/Perl/randBytes 1048576 > 10MB.dat
+
+
+
+
+#   ---------------------------------------
+#   100.  MUST BE LAST TO WORK SDKMAN helps with jvms `
+#   ---------------------------------------
+
+THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/mspeer201/.sdkman"
+[[ -s "/Users/mspeer201/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mspeer201/.sdkman/bin/sdkman-init.sh"
+
