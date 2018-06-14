@@ -12,7 +12,6 @@
 #  7.   System Operations & Information
 #  8.   Web Development
 #  9.   Reminders & Notes
-#  100. SDK MAN MUST BE LAST
 #
 #  ---------------------------------------------------------------------------
 
@@ -29,7 +28,8 @@
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-
+    export PATH="/Users/mspeer201/go/bin:$PATH"
+    
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
     export EDITOR=/usr/bin/nano
@@ -43,8 +43,11 @@
 #   (this is all commented out as I use Mac Terminal Profiles)
 #   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
 #   ------------------------------------------------------------
-   export CLICOLOR=1
-   export LSCOLORS=ExFxBxDxCxegedabagacad
+#   export CLICOLOR=1
+#   export LSCOLORS=ExFxBxDxCxegedabagacad
+
+#	GO Setup
+	export GOPATH=$HOME/go
 
 
 #   -----------------------------
@@ -301,10 +304,9 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 
 
 #   ---------------------------------------
-#   100.  MUST BE LAST TO WORK SDKMAN helps with jvms `
+#   100.  MUST BE LAST TO WORK SDKMAN helps with jvms 
 #   ---------------------------------------
-
-THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#    THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/mspeer201/.sdkman"
 [[ -s "/Users/mspeer201/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mspeer201/.sdkman/bin/sdkman-init.sh"
 
