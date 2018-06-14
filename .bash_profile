@@ -28,7 +28,7 @@
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-    export PATH="/Users/mspeer201/go/bin:$PATH"
+    
     
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -48,6 +48,7 @@
 
 #	GO Setup
 	export GOPATH=$HOME/go
+	export PATH="$GOPATH/bin:$PATH"
 
 
 #   -----------------------------
