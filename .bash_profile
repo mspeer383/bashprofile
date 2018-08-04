@@ -12,6 +12,8 @@
 #  7.   System Operations & Information
 #  8.   Web Development
 #  9.   Reminders & Notes
+# 10.
+#  100. SDKMan manages JVM versions must be last
 #
 #  ---------------------------------------------------------------------------
 
@@ -51,6 +53,13 @@
 	export GOPATH=$HOME/go
 	export PATH="$GOPATH/bin:$PATH"
 
+# Badge in ITERM (2)
+source ~/.iterm2_shell_integration.bash
+
+# Source .bashrc too
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
 
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
