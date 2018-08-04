@@ -27,9 +27,10 @@
 #   Set Paths
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
+    export PATH="$PATH:/Users/mspeer201//bin/"
     export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-    
-    
+
+
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
     export EDITOR=/usr/bin/nano
@@ -305,9 +306,8 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 
 
 #   ---------------------------------------
-#   100.  MUST BE LAST TO WORK SDKMAN helps with jvms 
+#   100.  MUST BE LAST TO WORK SDKMAN helps with jvms
 #   ---------------------------------------
 #    THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/mspeer201/.sdkman"
 [[ -s "/Users/mspeer201/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mspeer201/.sdkman/bin/sdkman-init.sh"
-
