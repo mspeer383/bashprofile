@@ -61,6 +61,22 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+# setup AutoEnv 
+source /usr/local/opt/autoenv/activate.sh
+
+# set the title of the tab to use pwd value
+
+if [ $ITERM_SESSION_ID ]; then
+  export PROMPT_COMMAND='echo -e "\033];${PWD##*/}\007"; ':$PROMPT_COMMAND;
+fi
+
+
+# Tab Colors alias
+alias blueTab='echo -e "\033]6;1;bg;red;brightness;0\a"; echo -e "\033]6;1;bg;green;brightness;179\a";echo -e "\033]6;1;bg;blue;brightness;255\a"'
+alias redTab='echo -e "\033]6;1;bg;red;brightness;255\a"; echo -e "\033]6;1;bg;green;brightness;38\a";echo -e "\033]6;1;bg;blue;brightness;0\a"'
+alias greenTab='echo -e "\033]6;1;bg;red;brightness;51\a"; echo -e "\033]6;1;bg;green;brightness;111\a";echo -e "\033]6;1;bg;blue;brightness;33\a"'
+
+
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
@@ -104,7 +120,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
     }
 
 #   showa: to remind yourself of an alias (given some part of it)
-#   ------------------------------------------------------------
+#   ----------------------------x`--------------------------------
     showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
 
 
@@ -314,9 +330,22 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 
 
 
+
+##
+# Your previous /Users/mspeer201/.bash_profile file was backed up as /Users/mspeer201/.bash_profile.macports-saved_2018-09-09_at_18:13:48
+##
+
+# MacPorts Installer addition on 2018-09-09_at_18:13:48: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# Activate AutoEnv https://github.com/kennethreitz/autoenv
+source /usr/local/opt/autoenv/activate.sh
+
 #   ---------------------------------------
 #   100.  MUST BE LAST TO WORK SDKMAN helps with jvms
 #   ---------------------------------------
 #    THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/mspeer201/.sdkman"
 [[ -s "/Users/mspeer201/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mspeer201/.sdkman/bin/sdkman-init.sh"
+
